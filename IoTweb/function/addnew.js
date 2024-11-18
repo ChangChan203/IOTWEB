@@ -1,11 +1,11 @@
 const SPREADSHEET_ID = '1PfmnkHnWmpQnzte6_hbE78ZIppOOhmKabH8JY_-GC-8';
-const RANGE = 'User_Data!A2:D100';
+const USER_DATA_RANGE = 'User_Data!A2:D100';
 const API_KEY = 'AIzaSyAdt8shqQItNOs-U6l4n_lmfjOHZhIoI2c';
 
 const btnAddUser = document.querySelector(".btnAddUser");
 
 async function addNewUser(name, uid, note, msv) {
-    const sheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}:append?valueInputOption=USER_ENTERED&key=${API_KEY}`;
+    const sheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${USER_DATA_RANGE}:append?valueInputOption=USER_ENTERED&key=${API_KEY}`;
 
     const data = {
         values: [
